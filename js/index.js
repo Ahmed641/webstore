@@ -55,7 +55,7 @@ const products = [
         imgA: 'img/pic19.jpeg',
         imgB: 'img/pic20.jpeg',
         imgC: 'img/pic21.jpeg',
-        price:79.99,
+        price: 79.99,
         details:'Soft sweatshirt with a slightly looser fit. Dropped shoulders and ribbing at neckline, cuffs, and hem. Soft, brushed inside.',
     },
     {
@@ -93,18 +93,17 @@ function addItemsToTheCart(curr, qty) {
 }
 
 
-function getHtmlFromProduct(product) {
-    return `
-    <article class="product">
+function getHtmlFromProduct(products) {
+    return `<article class="product">
         <header>
             <div>
-            <img src="${product.imgA}" alt="Product Image">
-            <img src="${product.imgB}" alt="Product Image">
-            <img src="${product.imgC}" alt="Product Image">
+            <img src="${products.imgA}" alt="Product Image">
+            <img src="${products.imgB}" alt="Product Image">
+            <img src="${products.imgC}" alt="Product Image">
         </div>
         </header>
         
-        <p>${product.details}</p>
+        <p>${products.details}</p>
         <form class="pic_details">
         
             <div class="colours"><legend>Colours</legend>
@@ -131,7 +130,7 @@ function getHtmlFromProduct(product) {
                 <dt>Rating</dt>
                 <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
             </dl>
-            <data ${product.price}" value="39"><del>$49.99</del> <ins>$34.99</ins></data>
+            <data value="39"><del>$49.99</del> <ins>${products.price}</ins></data>
             <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
             <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
             
@@ -143,12 +142,12 @@ function getHtmlFromProduct(product) {
 
 
 /**************EXUCTION***** */
-function showProducts(prodcut){
-    const arrayOdProducts = prodcut.map(getHtmlFromProduct);
-    const strngOfHtml = arrayOdProducts.join('\n');
+function showProducts(products){
+    const arrayOfProducts = products.map(getHtmlFromProduct);
+    const strngOfHtml = arrayOfProducts.join('\n');
     document.getElementById('products').innerHTML = strngOfHtml;
 }
 
 
 
-
+showProducts(products)

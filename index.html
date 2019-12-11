@@ -21,31 +21,25 @@
         <button class="menu" type="button">
           <span class="material-icons">menu</span>
         </button>
+
+        <article id="products" class="product"></article>
        
       </nav>
      
-
- 
       <form>
         
         </label>
-        <button class="search" type="button"><span class="material-icons">search</span></button>
+   
+       <button class="search" type="button"><span class="material-icons">search</span></button>
       </form>
       <div class="logo"> <a  href="index.html"><img src="img/AM Logo.png" alt="HTML Logo (replace this)"></a></div>
-
-
-      <!-- Additional nav links -->
-
-
       <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
       <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
    
     </header>
 
     <main>
-      <header>
-
-
+  
       <ul class="Category">
          
           <li><a class="link" href="#">Men</a></li>
@@ -58,7 +52,28 @@
        
         <div class="sale"> <a  href="index.html"><img src="img/Sale.png" alt="HTML Logo (replace this)"></a></div>
 
+       
 
+
+        <div class="dropdown">
+          <button class="producttypebtn" id="Product Type">Product Type </button>
+          <div class="ProductType-content">
+            <a class="link1" href="#">Shirts</a>
+            <a class="link1" href="#">Jackets</a>
+            <a class="link1" href="#">Coats</a>
+          </div>
+        </div>
+
+
+        <div class="dropdown">
+          <button class="Pricebtn" id="Price">Product Type </button>
+          <div class="Price-content">
+            <a class="link1" href="#">Highest To Lowest</a>
+            <a class="link1" href="#">Lowest To Highest</a>
+          </div>
+        </div>
+  
+      </main>
        
 
         <!-- Filtering product form -->
@@ -71,499 +86,35 @@
             <li><a class="link" href="#">Price</a></li>
             <li><a class="link" href="#">Product Type</a></li>  
           </ul>
-     
-      </header>
-
-      <section>
-        <h1>Results</h1>
-
-        <div id="products">
-          <!-- Product 1 -->
-          <article id="products" class="product">
-            <header>
-              <div>
-              <img src="img/pic2.jpeg" alt="Product Image">
-              <img src="img/pic1.jpeg" alt="Product Image">
-              <img src="img/pic3.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>Sweatshirt with long raglan sleeves and ribbing at neckline, cuffs, and hem. Soft, brushed inside. Regular fit.</p>
-            <form class="pic_details">
           
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li ><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$49.99</del> <ins>$34.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-
-
+    
           
-
-          <!-- Product 2 -->
-          <article class="product">
-            <header>
-              <div>
-              <img src="img/pic5.jpeg" alt="Product Image">
-              <img src="img/pic4.jpeg" alt="Product Image">
-              <img src="img/pic6.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>Lightweight, oversized sweatshirt with embroidery. Heavily dropped shoulders and ribbing at neckline, cuffs, and hem.</p>
-            <form class="pic_details">
-          
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$84.99</del> <ins>$64.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-          <!-- Product 3 -->
-          <article class="product">
-            <header>
-              <div>
-              <img src="img/pic8.jpeg" alt="Product Image">
-              <img src="img/pic7.jpeg" alt="Product Image">
-              <img src="img/pic9.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>Short, fitted dress in crêped jersey with long puff sleeves. Concealed zip at back. Unlined.</p>
-            <form class="pic_details">
-          
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$129.99</del> <ins>$99.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-          <!-- Product 4 -->
-          <article class="product">
-            <header>
-              <div>
-              <img src="img/pic10.jpeg" alt="Product Image">
-              <img src="img/pic11.jpeg" alt="Product Image">
-              <img src="img/pic12.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>PREMIUM QUALITY/CONSCIOUS. Short, double-breasted coat in a felted, woven wool blend. Wide, notched lapels and concealed snap fasteners at front. Relaxed fit with dropped shoulders, side-seam pockets, and an inner pocket with a button. Lined. Wool content is recycled.</p>
-            <form class="pic_details">
-          
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$99.99</del> <ins>$79.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-
-          <!-- Product 5 -->
-          <article class="product">
-            <header>
-              <div>
-              <img src="img/pic13.jpeg" alt="Product Image">
-              <img src="img/pic14.jpeg" alt="Product Image">
-              <img src="img/pic15.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>Coat in woven, felted wool-blend fabric. Stand-up collar, buttons at front, and decorative buttons at cuffs. Diagonal welt side pockets and two inner pockets. Vent at back. Lined.</p>
-            <form class="pic_details">
-          
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$199.99</del> <ins>$159.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-
-          <!-- Product 6 -->
-          <article class="product">
-            <header>
-              <div>
-              <img src="img/pic16.jpeg" alt="Product Image">
-              <img src="img/pic17.jpeg" alt="Product Image">
-              <img src="img/pic18.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>Long-sleeved sweatshirt in soft fabric with a lined drawstring hood, kangaroo pocket, and ribbing at cuffs and hem. Soft, brushed inside.</p>
-            <form class="pic_details">
-          
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$49.99</del> <ins>$29.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-          <!-- Product 7 -->
-          <article class="product">
-            <header>
-              <div>
-              <img src="img/pic19.jpeg" alt="Product Image">
-              <img src="img/pic20.jpeg" alt="Product Image">
-              <img src="img/pic21.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>Soft sweatshirt with a slightly looser fit. Dropped shoulders and ribbing at neckline, cuffs, and hem. Soft, brushed inside.</p>
-            <form class="pic_details">
-          
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$99.99</del> <ins>$79.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-          <!-- Product 8 -->
-          <article class="product">
-            <header>
-              <div>
-              <img src="img/pic22.jpeg" alt="Product Image">
-              <img src="img/pic23.jpeg" alt="Product Image">
-              <img src="img/pic24.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>Relaxed-fit sweatshirt with a design. Long sleeves and ribbing at neckline, cuffs, and hem.
-
-            </p>
-            <form class="pic_details">
-          
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$44.99</del> <ins>$29.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-           <!-- Product 9 -->
-           <article class="product">
-            <header>
-              <div>
-              <img src="img/pic25.jpeg" alt="Product Image">
-              <img src="img/pic26.jpeg" alt="Product Image">
-              <img src="img/pic27.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>Hooded coat in woven wool-blend fabric. Concealed snap fasteners at front, tie belt at waist, and side pockets. Vent at back. Lined. Wool content is recycled.
-
-            </p>
-            <form class="pic_details">
-          
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$119.99</del> <ins>$79.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-           <!-- Product 10-->
-           <article class="product">
-            <header>
-              <div>
-              <img src="img/pic28.jpeg" alt="Product Image">
-              <img src="img/pic29.jpeg" alt="Product Image">
-              <img src="img/pic30.jpeg" alt="Product Image">
-            </div>
-            </header>
-           
-            <p>Straight-cut jacket in woven fabric. Shawl collar, lightweight shoulder pads, welt front pockets, and 3/4-length sleeves with short slit at cuffs. No fasteners. Lined.
-
-            </p>
-            <form class="pic_details">
-          
-                <div class="colours"><legend>Colours</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="w"> <span>White</span></label></li>
-                  <li><label><input class="types" type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                </ul>
-              </div>
-             
-
-              
-                <div class="size"><legend>Sizes</legend>
-                <ul>
-                  <li><label><input class="types" type="radio" name="size" value="m"> <span>M</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="l"> <span>L</span></label></li>
-                  <li><label><input class="types" type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                </ul>
-              </div>
-           
-
-              
-                <dl>
-                  <dt>Rating</dt>
-                  <dd> <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$149.99</del> <ins>$129.99</ins></data>
-                <div class="cart"><button class="cart1"> </button>  <span class="material-icons">shopping_basket</span> </button></div>
-                <div class="likes"><button class="likes" type="button"><span class="material-icons">favorite_border</span></button></div>
-               
-            
-            </form>
-            <a class="link" href="#">see more</a>
-          </article>
-        
-      </section>
-
-      <footer>
+      
+        <section id="Products" class="Products"></section>
         <p>1-5 of 20 products found</p>
+
+        <section class="pageorder">
+          <div class="pages"><button class="pages" type="button"><span class="material-icons">arrow_back</span></button></div>
+          <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_1</span></button></div>
+          <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_2</span></button></div>
+          <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_3</span></button></div>
+          <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_4</span></button></div>
+          <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_5</span></button></div>
+          <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_6</span></button></div>
+          <div class="pages"><button class="pages" type="button"><span class="material-icons">arrow_forward</span></button></div>
+        </section>
+      
+        <article>
+        <h1>SIGN UP FOR OUR NEWSLETTER</h1>
+        <input type="email">
+      </article>
        
-      </footer>
+     
     </main>
 
-<section class="pageorder">
-    <div class="pages"><button class="pages" type="button"><span class="material-icons">arrow_back</span></button></div>
-    <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_1</span></button></div>
-    <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_2</span></button></div>
-    <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_3</span></button></div>
-    <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_4</span></button></div>
-    <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_5</span></button></div>
-    <div class="pages"><button class="pages" type="button"><span class="material-icons">filter_6</span></button></div>
-    <div class="pages"><button class="pages" type="button"><span class="material-icons">arrow_forward</span></button></div>
-  </section>
+  
 
-  <article>
-  <h1>SIGN UP FOR OUR NEWSLETTER</h1>
-  <input type="email">
-</article>
+
 
     <footer class="footer">
       <p class="copyright">&copy; Copyright, 2019.</p>

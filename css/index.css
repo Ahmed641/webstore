@@ -199,6 +199,102 @@ background-color: black;
 }
 
 
+
+
+/* Dropdown Button */
+.producttypebtn{
+
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+ 
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .ProductType-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+  }
+  /* Change color of dropdown links on hover */
+.ProductType-content a:hover {
+background-color: grey;
+    border-radius: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .ProductType-content{display: block;}
+
+
+
+
+
+
+
+/* Dropdown Button */
+.Pricebtn{
+
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    visibility: hidden;
+ 
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .Price-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+  }
+  /* Change color of dropdown links on hover */
+.Price-content a:hover {
+background-color: grey;
+    border-radius: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .Price-content{display: block;}
+
+
+.link1{
+    color: black;
+    border: none;
+    text-decoration: none;
+    margin: 1em;
+    margin-top: 1em;
+}
+
+
+.searchbar{
+    visibility: hidden;
+}
+
+
+
+
    
 
 
