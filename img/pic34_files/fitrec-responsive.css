@@ -1,0 +1,684 @@
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-retrying,
+.tfc-fitrec-product .tfc-retry-fitrec-inprogress.tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-waiting-retry {
+  display: none; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-waiting-retry, .tfc-fitrec-product .tfc-retry-fitrec-inprogress.tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-retrying, .tfc-fitrec-product .tfc-fitrec-result.tfc-nouser-responsive .tfc-button-part {
+  display: inline; }
+
+.tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout .tfc-logo, .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-logo {
+  background: transparent no-repeat center center;
+  background-size: contain; }
+
+.tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-flex-layout .tfc-badge, .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout .tfc-logo {
+  position: absolute; }
+
+.tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-arrow,
+.tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-size-arrow, .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout .tfc-arrow {
+  background: transparent no-repeat right center; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-retrying,
+.tfc-fitrec-product .tfc-retry-fitrec-inprogress.tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-waiting-retry {
+  display: none; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-waiting-retry, .tfc-fitrec-product .tfc-retry-fitrec-inprogress.tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-retrying, .tfc-fitrec-product .tfc-fitrec-result.tfc-nouser-responsive .tfc-button-part {
+  display: inline; }
+
+/*
+  Badge
+  $spacing = the amount of spacing in the T icon itself, between the left edge of the image and the left edge of the T
+  $width = the width of the actual T in the image, not including whitespace around the T
+  $height = the height of the actual T in the image, not include whitespace around the T
+  $fillHeight = If true, tfc-instruction-wrapper will fill whatever height it is given.
+                If false, tfc-instruction-wrapper will only take up as much height as it needs.
+*/
+/*
+  Top/Bottom
+*/
+/**********************************************************************************************************************
+  Default values for snapshot style config options
+***********************************************************************************************************************/
+/*
+Note: There are 2 different layouts for basic buttons. The configs get applied slightly differently in each case:
+
+1) Flex layout
+Width expands automatically to fit the text.
+Height may be configured using basic-button-height.
+Badge may be configured using the basic-button-logo config.
+Image backgrounds are not configurable.
+Widgets that use this layout: nouser-fytf-button-gsa, incompleteprofile-button-gsa
+
+2) SVG layout *This is the preferred layout going forward*
+Width may be configured using basic-button-svg-width (by default, it expands automatically to fit the text).
+Height may be configured using basic-button-svg-height.
+Badge may be configured using the logo-fill-color config.
+Image backgrounds are not configurable.
+Widgets that use this layout: nouser-responsive, incompleteprofile-responsive
+
+If basic-button-svg-spacing-mode=legacy, we apply:
+- An equal amount of space on the top/bottom/left sides of the T logo (computed based on the button and T logo heights)
+- .5em on the right side of the text in the button
+- A configurable amount of space between the T logo and the text (basic-button-svg-text-spacing-left)
+If basic-button-svg-spacing-mode=configurable, we apply:
+- An equal amount of space on the top/bottom side of the T logo (computed based on the button and T logo heights)
+- A configurable amount of space on either side of the button (basic-button-svg-spacing-horizontal)
+- A configurable amount of space between the T logo and the text (basic-button-svg-text-spacing-left)
+*/
+.tfc-fitrec-product .tfc-cfg-widget.tfc-fitrec-result {
+  padding: 0 0 0 0;
+  border-style: solid;
+  border-width: 0 0 0 0;
+  border-color: transparent transparent transparent transparent; }
+
+.tfc-fitrec-catalog .tfc-cfg-widget.tfc-fitrec-result {
+  font-size: 12px; }
+
+.tfc-fitrec-product .tfc-cfg-widget.tfc-fitrec-result {
+  margin: 0 0 0 0;
+  background-color: transparent; }
+
+.tfc-cfg-widget.tfc-fitrec-result {
+  display: block;
+  cursor: default;
+  position: relative;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  line-height: normal;
+  overflow: hidden;
+  /*
+   Because the fit score is inline-block and has a defined height, when it shows up on its own line it completely
+   disregards the line height and renders at its defined height. Therefore, we add a zero-width &nbsp; element next to
+   it, which is guaranteed to be on the same line and forces the browser to honor the line-height.
+   */ }
+  .tfc-cfg-widget.tfc-fitrec-result div, .tfc-cfg-widget.tfc-fitrec-result span, .tfc-cfg-widget.tfc-fitrec-result iframe, .tfc-cfg-widget.tfc-fitrec-result img, .tfc-cfg-widget.tfc-fitrec-result table, .tfc-cfg-widget.tfc-fitrec-result tbody, .tfc-cfg-widget.tfc-fitrec-result tr, .tfc-cfg-widget.tfc-fitrec-result td, .tfc-cfg-widget.tfc-fitrec-result input, .tfc-cfg-widget.tfc-fitrec-result select, .tfc-cfg-widget.tfc-fitrec-result button, .tfc-cfg-widget.tfc-fitrec-result a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    line-height: inherit;
+    color: inherit;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1em;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    text-transform: inherit;
+    text-align: inherit;
+    vertical-align: baseline;
+    border-collapse: separate;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; }
+  .tfc-cfg-widget.tfc-fitrec-result tbody, .tfc-cfg-widget.tfc-fitrec-result tr, .tfc-cfg-widget.tfc-fitrec-result td {
+    vertical-align: middle; }
+  .tfc-cfg-widget.tfc-fitrec-result input:focus,
+  .tfc-cfg-widget.tfc-fitrec-result select:focus,
+  .tfc-cfg-widget.tfc-fitrec-result button:focus,
+  .tfc-cfg-widget.tfc-fitrec-result a:focus {
+    outline: none; }
+    .tfc-cfg-widget.tfc-fitrec-result input:focus.tfc-click,
+    .tfc-cfg-widget.tfc-fitrec-result select:focus.tfc-click,
+    .tfc-cfg-widget.tfc-fitrec-result button:focus.tfc-click,
+    .tfc-cfg-widget.tfc-fitrec-result a:focus.tfc-click {
+      box-shadow: none; }
+  .tfc-cfg-widget.tfc-fitrec-result.tfc-overflow-visible {
+    overflow: visible; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-overflow-box {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    box-sizing: content-box;
+    overflow: hidden;
+    padding: 0.6em;
+    margin: -0.6em; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-wrapper {
+    position: relative; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-fit-score-line-height-fix {
+    display: inline-block;
+    width: 0; }
+  .tfc-cfg-widget.tfc-fitrec-result.tfc-sfo-available .tfc-sfo-content-left {
+    margin-right: .5em; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area.tfc-cfg-clickable-area-has-arrow {
+    position: relative; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area.tfc-cfg-clickable-area-has-arrow .tfc-cfg-clickable-area-arrow {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-bottom-width: 0;
+      right: 0;
+      top: 50%;
+      margin-top: -3px; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-link,
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-discovery-link {
+    cursor: pointer;
+    background: transparent no-repeat right center; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area {
+    cursor: pointer; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-flex-layout .tfc-valign {
+      padding: 0 10px; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-flex-layout .tfc-badge {
+      background: transparent no-repeat left top; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-display {
+    display: none; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-svg.tfc-fit-score-background,
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-svg .tfc-fit-score-foreground {
+    background: transparent no-repeat;
+    background-position: 0.07937em 0; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-svg.tfc-fit-score-background {
+    position: relative;
+    height: 1em;
+    width: 5.79365em;
+    margin: -0.07937em;
+    margin: 0 calc(-0.07937em + 1px);
+    background-image: url(../images/410b984e43018cd502f2f9883a9cdae9.svg);
+    background-size: contain; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-svg .tfc-fit-score-foreground {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: auto 100%; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-message-layout .tfc-cfg-logo {
+    position: absolute;
+    left: 0;
+    top: 50%; }
+  .tfc-cfg-widget.tfc-fitrec-result.tfc-sfo-available .tfc-cfg-sfo-layout .tfc-sfo-content-left,
+  .tfc-cfg-widget.tfc-fitrec-result.tfc-sfo-available .tfc-cfg-sfo-layout .tfc-cfg-sfo-icon {
+    vertical-align: middle; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-sfo-icon {
+    display: inline-block;
+    background: transparent no-repeat center center;
+    background-size: contain;
+    cursor: pointer; }
+  .tfc-cfg-widget.tfc-fitrec-result.tfc-sfo-unavailable .tfc-cfg-sfo-icon {
+    display: none; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-size-wrapper {
+    vertical-align: middle; }
+
+.tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout .tfc-logo, .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-logo {
+  background-image: url(../images/ebb080d369fe1f3498c264c54a0bd2f5.svg); }
+
+.tfc-cfg-widget.tfc-fitrec-result.tfc-sfo-unavailable .tfc-cfg-arrow.tfc-profile {
+  background-image: url(../images/e1c57bb9add73e578b87dc23b94e5ae3.svg);
+  background-size: 0.3125em 1em;
+  padding-right: 0.8125em; }
+  .tfc-cfg-widget.tfc-fitrec-result.tfc-sfo-unavailable .tfc-cfg-arrow.tfc-profile:hover {
+    background-image: url(../images/e1c57bb9add73e578b87dc23b94e5ae3.svg);
+    background-size: 0.3125em 1em;
+    padding-right: 0.8125em; }
+
+.tfc-cfg-widget.tfc-fitrec-result.tfc-sfo-unavailable .tfc-cfg-size-arrow {
+  background-image: url(../images/e1c57bb9add73e578b87dc23b94e5ae3.svg);
+  background-size: 0.3125em 1em;
+  padding-right: 0.8125em; }
+  .tfc-cfg-widget.tfc-fitrec-result.tfc-sfo-unavailable .tfc-cfg-size-arrow:hover {
+    background-image: url(../images/e1c57bb9add73e578b87dc23b94e5ae3.svg);
+    background-size: 0.3125em 1em;
+    padding-right: 0.8125em; }
+
+.tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout.tfc-hide-logo {
+  padding-left: 0.5em; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout.tfc-hide-logo .tfc-logo {
+    display: none; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout.tfc-hide-logo .tfc-valign {
+    padding-left: 0; }
+
+.tfc-cfg-widget.tfc-fitrec-result {
+  font-size: 12px;
+  color: #000;
+  /*
+   * Show a box shadow instead of outline on:
+   * - Native input focus
+   * - Native select focus
+   * - Button focus, including custom select boxes (only when tabbed to)
+   * - Link focus (only when tabbed to)
+   */ }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-link {
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: none;
+    letter-spacing: normal; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-link:hover {
+      color: #000;
+      font-weight: normal;
+      text-decoration: underline; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-link.tfc-cfg-link-carat {
+      background-image: url(../images/316229dee2e6357c48e2b38cab78ac05.png);
+      padding-right: 10px; }
+      .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-link.tfc-cfg-link-carat:hover {
+        background-image: url(../images/316229dee2e6357c48e2b38cab78ac05.png); }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-discovery-link {
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: none;
+    letter-spacing: normal; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-discovery-link:hover {
+      color: #000;
+      font-weight: normal;
+      text-decoration: underline; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area {
+    white-space: nowrap;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: none;
+    letter-spacing: normal;
+    background: transparent no-repeat right center; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area.tfc-cfg-clickable-area-carat {
+      padding-right: 10px;
+      background-image: url(../images/cbb432caeba627b7622f5b80632d4a15.png); }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area.tfc-cfg-clickable-area-has-arrow {
+      padding-right: 15px; }
+      .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area.tfc-cfg-clickable-area-has-arrow .tfc-cfg-clickable-area-arrow {
+        border-top-color: #000; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area:hover {
+      color: #000;
+      font-weight: normal;
+      text-decoration: underline; }
+      .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area:hover.tfc-cfg-clickable-area-carat {
+        background-image: url(../images/cbb432caeba627b7622f5b80632d4a15.png); }
+      .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-clickable-area:hover.tfc-cfg-clickable-area-has-arrow .tfc-cfg-clickable-area-arrow {
+        border-top-color: #000; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-title {
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: normal; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-account-title {
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: normal; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-message {
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: normal; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-size-label {
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    text-decoration: none;
+    cursor: pointer; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-size-label:hover {
+      color: #000;
+      text-decoration: none;
+      font-weight: normal; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-size {
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: normal;
+    text-decoration: none; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-score-description {
+    color: #000;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    text-decoration: underline; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button {
+    font-size: 12px;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
+    background: #f2f2f2;
+    background: -moz-linear-gradient(#f2f2f2, #f2f2f2);
+    background: -webkit-linear-gradient(#f2f2f2, #f2f2f2);
+    background: linear-gradient(#f2f2f2, #f2f2f2);
+    border-color: #dbdbdb; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button:hover {
+      color: #000;
+      font-weight: normal;
+      text-decoration: none; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-flex-layout {
+      height: 33px;
+      padding-left: 26px; }
+      .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-flex-layout .tfc-badge {
+        height: 19px;
+        width: 19px;
+        background-image: url(../images/38c2c0a1ccc2ddfd758fc5933e84a8ad.png);
+        left: 7px;
+        top: 7px; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout {
+      height: 2.5em;
+      padding-left: 2em; }
+      .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout .tfc-logo {
+        width: 1.5em;
+        height: 1.5em;
+        left: 0.5em;
+        top: 0.5em; }
+      .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button.tfc-svg-layout .tfc-valign {
+        padding-left: 0.5em;
+        padding-right: 0.5em; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-basic-button-flex-layout-height {
+    min-height: 33px;
+    height: 33px; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-64x11 .tfc-fit-score-foreground {
+    background-image: url(../images/e3bbeb87c23f8b4bf9976047284da92f.png); }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-80x13.tfc-fit-score-background {
+    background-image: url(../images/3ad7e4976ff1ee0ccd1e5a83ffb0aaa4.png); }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-80x13 .tfc-fit-score-foreground {
+    background-image: url(../images/d1fdc815473427e15b4cc28d902d133a.png); }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-svg {
+    font-size: 1em; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-svg .tfc-fit-score-foreground {
+      background-image: url(../images/a455d715f9acb0ac97ba66b9156c7431.svg); }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-display.tfc-cfg-fit-score-svg {
+    display: inline-block; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-badge-16x15 {
+    background-image: url(../images/cd65d11bdf7d17af288576693854e52a.png); }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-divider-line {
+    display: none; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-fit-score-spacing {
+    margin-right: .5em; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-side-by-side-layout .tfc-left-side {
+    float: left;
+    margin-right: -1000%; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-side-by-side-layout .tfc-right-side {
+    float: right; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-logo {
+    width: 1em;
+    height: 1em; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-message-layout {
+    padding-left: 1em; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-message-layout .tfc-cfg-logo {
+      margin-top: -0.5em; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-message-layout .tfc-content {
+      min-height: 1em;
+      padding-left: 0.5em; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-message-layout .tfc-valign-wrapper {
+      height: 1em;
+      min-height: 1em; }
+  .tfc-cfg-widget.tfc-fitrec-result.tfc-sfo-available .tfc-cfg-sfo-layout {
+    line-height: 2em; }
+  .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-sfo-icon {
+    background-image: url(../images/bb6f2594195e9673af8531cc12ed19b6.svg);
+    width: 2em;
+    height: 2em; }
+    .tfc-cfg-widget.tfc-fitrec-result .tfc-cfg-sfo-icon:hover {
+      background-image: url(../images/bb6f2594195e9673af8531cc12ed19b6.svg);
+      width: 2em;
+      height: 2em; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-error-responsive {
+  display: block; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-error-responsive .tfc-cfg-basic-button {
+    height: 34px;
+    border-radius: 93px;
+    background: #fff;
+    border: #fff;
+    font-family: "HM Sans",Helvetica,sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #c0c0c0;
+    padding-right: 13px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-error-responsive button.tfc-cfg-basic-button.tfc-svg-layout:focus {
+    outline: -webkit-focus-ring-color auto 5px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-error-responsive .tfc-hms-link {
+    text-decoration: underline !important; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-error-responsive .tfc-arrow {
+    margin-left: 10px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-error-responsive .tfc-cfg-basic-button {
+    cursor: default; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-cfg-basic-button {
+  height: 34px;
+  border-radius: 93px;
+  background: #fff;
+  border: #fff;
+  font-family: "HM Sans",Helvetica,sans-serif;
+  text-decoration: underline;
+  text-decoration-color: #c0c0c0;
+  padding-right: 13px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive button.tfc-cfg-basic-button.tfc-svg-layout:focus {
+  outline: -webkit-focus-ring-color auto 5px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-hms-link {
+  text-decoration: underline !important; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-arrow {
+  margin-left: 10px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-content {
+  margin-left: 10px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-cfg-arrow {
+  text-decoration: none; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-estimationinprogress-responsive .tfc-cfg-link {
+  text-decoration-color: #c0c0c0; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-incompletegarment-responsive {
+  display: block; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompletegarment-responsive .tfc-cfg-basic-button {
+    height: 34px;
+    border-radius: 93px;
+    background: #fff;
+    border: #fff;
+    font-family: "HM Sans",Helvetica,sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #c0c0c0;
+    padding-right: 13px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompletegarment-responsive button.tfc-cfg-basic-button.tfc-svg-layout:focus {
+    outline: -webkit-focus-ring-color auto 5px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompletegarment-responsive .tfc-hms-link {
+    text-decoration: underline !important; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompletegarment-responsive .tfc-arrow {
+    margin-left: 10px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-incompleteprofile-responsive {
+  display: block; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompleteprofile-responsive .tfc-cfg-basic-button {
+    height: 34px;
+    border-radius: 93px;
+    background: #fff;
+    border: #fff;
+    font-family: "HM Sans",Helvetica,sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #c0c0c0;
+    padding-right: 13px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompleteprofile-responsive button.tfc-cfg-basic-button.tfc-svg-layout:focus {
+    outline: -webkit-focus-ring-color auto 5px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompleteprofile-responsive .tfc-hms-link {
+    text-decoration: underline !important; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompleteprofile-responsive .tfc-arrow {
+    margin-left: 10px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompleteprofile-responsive .tfc-cfg-basic-button {
+    height: 34px;
+    border-radius: 93px;
+    background: #fff;
+    border: #fff;
+    font-family: Helvetica; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-incompleteprofile-responsive .tfc-arrow {
+    margin-left: 10px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-invalidgender-responsive {
+  display: block; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-invalidgender-responsive .tfc-cfg-basic-button {
+    height: 34px;
+    border-radius: 93px;
+    background: #fff;
+    border: #fff;
+    font-family: "HM Sans",Helvetica,sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #c0c0c0;
+    padding-right: 13px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-invalidgender-responsive button.tfc-cfg-basic-button.tfc-svg-layout:focus {
+    outline: -webkit-focus-ring-color auto 5px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-invalidgender-responsive .tfc-hms-link {
+    text-decoration: underline !important; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-invalidgender-responsive .tfc-arrow {
+    margin-left: 10px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-nouser-responsive .tfc-cfg-basic-button {
+  display: inline-block; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-nouser-responsive .tfc-cfg-basic-button,
+.tfc-fitrec-product .tfc-fitrec-result.tfc-nouser-responsive .tfc-cfg-sfo-icon {
+  vertical-align: middle; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-nouser-responsive .tfc-cfg-basic-button {
+  height: 34px;
+  border-radius: 93px;
+  background: #fff;
+  border: #fff;
+  font-family: "HM Sans",Helvetica,sans-serif;
+  text-decoration: underline;
+  text-decoration-color: #c0c0c0;
+  padding-right: 13px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-nouser-responsive button.tfc-cfg-basic-button.tfc-svg-layout:focus {
+  outline: -webkit-focus-ring-color auto 5px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-nouser-responsive .tfc-hms-link {
+  text-decoration: underline !important; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-nouser-responsive .tfc-arrow {
+  margin-left: 10px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-sizenotavailable-responsive {
+  display: block; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-sizenotavailable-responsive .tfc-cfg-basic-button {
+    height: 34px;
+    border-radius: 93px;
+    background: #fff;
+    border: #fff;
+    font-family: "HM Sans",Helvetica,sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #c0c0c0;
+    padding-right: 13px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-sizenotavailable-responsive button.tfc-cfg-basic-button.tfc-svg-layout:focus {
+    outline: -webkit-focus-ring-color auto 5px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-sizenotavailable-responsive .tfc-hms-link {
+    text-decoration: underline !important; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-sizenotavailable-responsive .tfc-arrow {
+    margin-left: 10px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-success-responsive {
+  display: block; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-success-responsive .tfc-cfg-basic-button {
+    height: 34px;
+    border-radius: 93px;
+    background: #fff;
+    border: #fff;
+    font-family: "HM Sans",Helvetica,sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #c0c0c0;
+    padding-right: 13px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-success-responsive button.tfc-cfg-basic-button.tfc-svg-layout:focus {
+    outline: -webkit-focus-ring-color auto 5px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-success-responsive .tfc-hms-link {
+    text-decoration: underline !important; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-success-responsive .tfc-arrow {
+    margin-left: 10px; }
+
+.tfc-fitrec-product .tfc-fitrec-result.tfc-unrecommendabledepartment-responsive {
+  display: block; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-unrecommendabledepartment-responsive .tfc-cfg-basic-button {
+    height: 34px;
+    border-radius: 93px;
+    background: #fff;
+    border: #fff;
+    font-family: "HM Sans",Helvetica,sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #c0c0c0;
+    padding-right: 13px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-unrecommendabledepartment-responsive button.tfc-cfg-basic-button.tfc-svg-layout:focus {
+    outline: -webkit-focus-ring-color auto 5px; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-unrecommendabledepartment-responsive .tfc-hms-link {
+    text-decoration: underline !important; }
+  .tfc-fitrec-product .tfc-fitrec-result.tfc-unrecommendabledepartment-responsive .tfc-arrow {
+    margin-left: 10px; }
+
+.tfc-fitrec-account .tfc-fitrec-result.tfc-create-responsive {
+  display: block;
+  min-height: 175px;
+  margin: 24px; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-create-responsive .tfc-widget-wrapper {
+    background: #fff;
+    padding: 0 0 16px 0; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-create-responsive .tfc-cfg-account-title {
+    font-family: "HM Sans",Helvetica,sans-serif;
+    color: #222;
+    font-size: 13px;
+    padding: 20px 24px;
+    background-color: #F4E6E3;
+    font-weight: 600;
+    display: block; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-create-responsive .tfc-message-wrapper {
+    padding: 24px 24px 16px 24px;
+    font-size: 13px;
+    font-family: "HM Sans",Helvetica,sans-serif; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-create-responsive .tfc-mobile-divider {
+    display: none; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-create-responsive .tfc-hms-manage-button {
+    padding: 12px 24px;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: "HM Sans", Helvetica, sans-serif; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-create-responsive .tfc-hms-manage-button:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+
+.tfc-fitrec-account .tfc-fitrec-result.tfc-manage-responsive {
+  display: block;
+  min-height: 175px;
+  margin: 24px; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-manage-responsive .tfc-widget-wrapper {
+    background: #fff;
+    padding: 0 0 16px 0; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-manage-responsive .tfc-cfg-account-title {
+    font-family: "HM Sans",Helvetica,sans-serif;
+    color: #222;
+    font-size: 13px;
+    padding: 20px 24px;
+    background-color: #F4E6E3;
+    font-weight: 600;
+    display: block; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-manage-responsive .tfc-message-wrapper {
+    padding: 24px 24px 16px 24px;
+    font-size: 13px;
+    font-family: "HM Sans",Helvetica,sans-serif; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-manage-responsive .tfc-mobile-divider {
+    display: none; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-manage-responsive .tfc-hms-manage-button {
+    padding: 12px 24px;
+    font-size: 13px;
+    text-decoration: none;
+    font-family: "HM Sans", Helvetica, sans-serif; }
+  .tfc-fitrec-account .tfc-fitrec-result.tfc-manage-responsive .tfc-hms-manage-button:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+
+/*# sourceMappingURL=fitrec-responsive.css.map*/

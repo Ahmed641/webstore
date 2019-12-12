@@ -22,14 +22,14 @@
           <span class="material-icons">menu</span>
         </button>
 
-        <article id="products" class="product"></article>
+  
        
       </nav>
      
       <form>
         
-        </label>
-   
+      
+ 
        <button class="search" type="button"><span class="material-icons">search</span></button>
       </form>
       <div class="logo"> <a  href="index.html"><img src="img/AM Logo.png" alt="HTML Logo (replace this)"></a></div>
@@ -55,23 +55,9 @@
        
 
 
-        <div class="dropdown">
-          <button class="producttypebtn" id="Product Type">Product Type </button>
-          <div class="ProductType-content">
-            <a class="link1" href="#">Shirts</a>
-            <a class="link1" href="#">Jackets</a>
-            <a class="link1" href="#">Coats</a>
-          </div>
-        </div>
 
+       
 
-        <div class="dropdown">
-          <button class="Pricebtn" id="Price">Product Type </button>
-          <div class="Price-content">
-            <a class="link1" href="#">Highest To Lowest</a>
-            <a class="link1" href="#">Lowest To Highest</a>
-          </div>
-        </div>
   
       </main>
        
@@ -83,14 +69,28 @@
             <li><a class="link" href="#">Color</a></li>
             <li><a class="link" href="#">Size</a></li>
             <li><a class="link" href="#">Style</a></li>
-            <li><a class="link" href="#">Price</a></li>
-            <li><a class="link" href="#">Product Type</a></li>  
+            <li>   <div class="dropdown">
+              <button class="link" class="producttypebtn" id="ProductType">Product Type</button>
+              <div class="ProductType-content">
+               <div class="space"> <a class="link1" href="#">Sweatshirts</a></div>
+               <div class="space"> <a class="link1" href="#">Jackets</a></div>
+               <div class="space">  <a class="link1" href="#">Coats</a></div>
+               <div class="space">  <a class="link1" href="#">Dress</a></div>
+              </div>
+            </div></li>
+            <li> <div class="dropdown">
+              <button class="link" class="Pricebtn" id="Price">Price</button>
+              <div class="Price-content">
+                <div class="space">  <a class="link1" href="#">H To L</a></div>
+                <div class="space">  <a class="link1" href="#">L To H</a></div>
+              </div>
+            </div></li>  
           </ul>
           
     
           
       
-        <section id="Products" class="Products"></section>
+        <section id="products" class="product"></section>
         <p>1-5 of 20 products found</p>
 
         <section class="pageorder">

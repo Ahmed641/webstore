@@ -101,7 +101,7 @@ background-color: black;
 
 
 
-.siz{
+.size{
     margin: 1em;
 }
 
@@ -201,6 +201,14 @@ background-color: black;
 
 
 
+
+
+
+
+
+ /* Dropdown cat*/
+
+
 /* Dropdown Button */
 .producttypebtn{
 
@@ -226,15 +234,16 @@ background-color: black;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     
+    
   }
   /* Change color of dropdown links on hover */
 .ProductType-content a:hover {
-background-color: grey;
+background-color: black;
     border-radius: 10px;
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .ProductType-content{display: block;}
+.dropdown:hover .ProductType-content{display:  block}
 
 
 
@@ -242,7 +251,7 @@ background-color: grey;
 
 
 
-/* Dropdown Button */
+/* Dropdown Button Price*/
 .Pricebtn{
 
     color: black;
@@ -255,7 +264,8 @@ background-color: grey;
   .dropdown {
     position: relative;
     display: inline-block;
-    visibility: hidden;
+    
+  
  
   }
   
@@ -267,11 +277,12 @@ background-color: grey;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+  
     
   }
   /* Change color of dropdown links on hover */
 .Price-content a:hover {
-background-color: grey;
+background-color: black;
     border-radius: 10px;
 }
 
@@ -280,21 +291,53 @@ background-color: grey;
 
 
 .link1{
-    color: black;
+    color: white;
     border: none;
     text-decoration: none;
     margin: 1em;
-    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: gray;
+    margin: 1em;
+    border-radius: 10px;
+}
+.space{
+    margin: 0.5em;
 }
 
 
-.searchbar{
+
+
+
+.searchba{
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(101, 64, 160);
+    border: solid 3px rgb(247, 157, 210);
+    border-radius: 10px;
+    width: 75%;
+    margin-top: 8.5em;
+    margin-left: 12.5%;
+    font-size: 2.2em;
+    opacity: 0;
+    outline: none;
+    cursor: text;
     visibility: hidden;
 }
+
+
+.type{
+    color: black;
+    visibility: hidden;
+}
+
+   
+
+
+
 
 
 
 
    
-
-
+  
